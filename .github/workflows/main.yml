@@ -1,7 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-  jobs:
-     build:
-       runs-on: ubuntu-latest
-     steps:
-        name: run tests
-          uses: liatrio/github-actions/apprentice-action@apprentice-action
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@apprentice-action
