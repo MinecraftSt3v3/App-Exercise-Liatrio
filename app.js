@@ -25,8 +25,7 @@ app.get('/', (req, res) => {
 
 		res.status(200).send({
             myName: 'My name is Steven Mendez !',
-            date: 'Date ' + n,
-            time:'Time ' + time,
+            timeStamp: +new Date
          })
 });
 
