@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: See Code
-        uses: actions/checkout@v3
+        uses: MinecraftSt3v3/App-Exercise-Liatrio
  
       - name: Publish to DockerHub
         uses: dockerbuild@master
