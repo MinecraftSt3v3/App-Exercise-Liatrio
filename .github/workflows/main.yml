@@ -13,9 +13,25 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
-  build:
+  build-container:
+    - name: Build Container, Test, and Push to Hub
     runs-on: ubuntu-latest
     steps:
+
+    - name: Build Container
+      uses:
+        
+
+    - name: get files
+      uses: 
+
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
-  
+
+    - name: Push to Hub
+      uses: 
+        with: 
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_USERPASS }}
+          repository: app/next
+          tags: latest, ${{ github.run_number }}
