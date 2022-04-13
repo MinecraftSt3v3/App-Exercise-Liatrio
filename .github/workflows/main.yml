@@ -9,10 +9,30 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    
 jobs:
+  build-container:
+    name: Build Docker Container
+    runs-on: ubuntu-latest
+    steps:
+      - name: See Code
+        uses: main@master
+      - name: Publish to github
+        uses: dockerbuildpush@master
+        with: 
+          username: github
+          password: github
+          registry: docker.pkg.github.com
+          repository: https://github.com/MinecraftSt3v3/App-Exercise-Liatrio
+          tags: latest, ${{ github.run_number}}
+      - name: Publish to DockerHub
+        uses: dockerbuild@master
+        with:
+          username: ${{ secretes.DOCKERHUB_USERNAME }} 
+          password: ${{ secrets.DOCKERHUB_USERPASS }}
+          repository: app/next
+          tags: latest, ${{ github.run_number }}
+        
   build:
     runs-on: ubuntu-latest
     steps:
