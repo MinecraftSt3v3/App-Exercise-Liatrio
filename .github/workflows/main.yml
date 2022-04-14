@@ -13,6 +13,6 @@ jobs:
         DOCKER_PASSWORD: Steve@1699  
       run: |
         docker login -u dockeruserst3v3 -p Steve@1699
-    - name: docker build nodejs
+    - name: docker build
       run: |
-        docker build ./app -t minecraftst3v3/latest
+        docker build  -t exercise
