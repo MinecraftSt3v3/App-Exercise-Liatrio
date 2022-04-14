@@ -19,6 +19,6 @@ jobs:
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
     - name: Docker push
-      uses: |
+      run: |
         docker push
       
