@@ -12,7 +12,7 @@ jobs:
         DOCKER_USER: dockeruserst3v3   
         DOCKER_PASSWORD: Steve@1699  
       run: |
-        docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_USERPASS
+        docker login -u dockeruserst3v3 -p Steve@1699
     - name: docker build nodejs
       run: |
         docker build ./app -t minecraftst3v3/latest
