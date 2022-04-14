@@ -9,8 +9,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker login
       env:
-        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}   
-        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_USERPASS }}  
+        DOCKER_USER: dockeruserst3v3   
+        DOCKER_PASSWORD: Steve@1699  
       run: |
         docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_USERPASS
     - name: docker build nodejs
