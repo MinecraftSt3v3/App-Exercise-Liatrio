@@ -9,10 +9,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker login
       env:
-        DOCKER_USER: dockeruserst3v3   
-        DOCKER_PASSWORD: Steve@1699  
+        DOCKER_USER: dockeruserst3v3
+        DOCKER_PASSWORD: ${{ DOCKERHUB_USERPASS }}
       run: |
-        docker login -u dockeruserst3v3 -p Steve@1699
+        docker login -u dockeruserst3v3 -p $DOCKER_PASSWORD
     - name: docker build
       run: |
         docker build  -t exercise
