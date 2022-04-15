@@ -17,6 +17,4 @@ jobs:
       uses: liatrio/github-actions/apprentice-action@master
     - name: Docker push
       run: |
-        docker push
-        # not done with last line
-      
+        docker push dockeruserst3v3/liatrio-exercise:exercise
