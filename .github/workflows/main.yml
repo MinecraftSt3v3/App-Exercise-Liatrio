@@ -8,11 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: docker login
-      env:
-        DOCKER_USER: dockeruserst3v3
-        DOCKER_PASSWORD: ${{ DOCKER_PASSWORD }}
       run: |
-        docker login -u dockeruserst3v3 -p $DOCKER_PASSWORD
+        docker login -u dockeruserst3v3 -p Test@12345
     - name: docker build
       run: |
         docker build  -t exercise
