@@ -10,9 +10,9 @@ jobs:
     - name: docker login
       env:
         DOCKER_USER: dockeruserst3v3
-        DOCKER_PASSWORD: ${{ DOCKERHUB_USERPASS }}
+        DOCKERHUB_USERPASS: ${{ DOCKERHUB_USERPASS }}
       run: |
-        docker login -u dockeruserst3v3 -p $DOCKER_PASSWORD
+        docker login -u dockeruserst3v3 -p $DOCKERHUB_USERPASS
     - name: docker build
       run: |
         docker build  -t exercise
