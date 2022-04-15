@@ -20,4 +20,4 @@ jobs:
       uses: liatrio/github-actions/apprentice-action@master
     - name: docker push
       run: |
-        docker push liatrio-exercise:exercise
+        docker push https://github.com/MinecraftSt3v3/App-Exercise-Liatrio.git#main:exercise
