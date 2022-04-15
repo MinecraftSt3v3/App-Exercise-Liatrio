@@ -24,8 +24,8 @@ app.get('/', (req, res) => {
 		const time = date.toLocaleTimeString();
 
 		res.status(200).send({
-            myName: 'My name is Steven Mendez !',
-            timeStamp: +new Date
+            message: 'My name is Steven Mendez',
+            timestamp: +new Date
          })
 });
 
