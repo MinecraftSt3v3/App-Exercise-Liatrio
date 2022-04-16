@@ -15,7 +15,7 @@ jobs:
         docker build https://github.com/MinecraftSt3v3/App-Exercise-Liatrio.git#main
     - name: docker run
       run: |
-        docker run -p 80:80 -d exercise
+        docker run -p 80:80 -d
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
     - name: docker push
