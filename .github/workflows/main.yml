@@ -20,4 +20,4 @@ jobs:
       uses: liatrio/github-actions/apprentice-action@master
     - name: docker push
       run: |
-        docker push
+        docker push exercise
