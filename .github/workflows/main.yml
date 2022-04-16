@@ -18,6 +18,9 @@ jobs:
         docker run -p 80:80 -d exercise
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
+    - name: run tag
+      run: |
+        docker tag exercise:latest dockeruserst3v3/App-Exercise-Liatrio:image
     - name: docker push
       run: |
-        docker push exercise https://github.com/MinecraftSt3v3/App-Exercise-Liatrio.git#main
+        docker push dockeruserst3v3/App-Exercise-Liatrio:image
