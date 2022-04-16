@@ -4,7 +4,8 @@
   "description": "This exercise is an interview exercise for Liatrio, it consists of making a repository, making a Node.js and Express application, containerization of the application, a GitHub workflow, and a cloud deployment using Azure",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Steven Mendez",
   "license": "ISC",
