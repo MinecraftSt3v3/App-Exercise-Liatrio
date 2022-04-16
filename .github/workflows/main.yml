@@ -12,10 +12,10 @@ jobs:
         docker login -u dockeruserst3v3 -p Test@12345
     - name: docker build
       run: |
-        docker build https://github.com/MinecraftSt3v3/App-Exercise-Liatrio.git#main
+        docker build -t exercise https://github.com/MinecraftSt3v3/App-Exercise-Liatrio.git#main
     - name: docker run
       run: |
-        docker run -p 80:80 -d
+        docker run -p 80:80 -d exercise
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
     - name: docker push
