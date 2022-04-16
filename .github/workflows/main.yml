@@ -20,7 +20,7 @@ jobs:
       uses: liatrio/github-actions/apprentice-action@master
     - name: run tag
       run: |
-        docker tag exercise:latest dockeruserst3v3/App-Exercise-Liatrio:image
+        docker tag exercise:latest dockeruserst3v3/liatrio-exercise:image
     - name: docker push
       run: |
-        docker push dockeruserst3v3/App-Exercise-Liatrio:image
+        docker push dockeruserst3v3/liatrio-exercise:image
