@@ -1,4 +1,7 @@
-#Steven Mendez
+# Developer: steven Mendez
+# YAML File to to test application, every time a 
+# push to the repository occurs this workflow will run
+
 name: Docker liatrio
 
 on: [push]
